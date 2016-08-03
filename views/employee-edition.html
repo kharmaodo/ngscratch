@@ -1,0 +1,46 @@
+<div id="currentEmployeeNew">
+
+    <h2>Edition de l'employee n° {{other.id}}</h2>
+
+    <form name="dummy.creationFormulaire">
+		 <input type="hidden" ng-model="other.id" />
+        <div class="formField">
+            <label for="currentEmployee.nom">Nom</label>
+            <input id="currentEmployee.nom" type="text" ng-model="other.nom" value="other.nom"/>
+        </div>
+
+        <div class="formField">
+            <label for="currentEmployee.prenom">Prenom</label>
+            <input id="currentEmployee.prenom" type="text"  ng-model="other.prenom" value="other.prenom"/>
+            
+        </div>
+
+		<div class="formField">
+            <label for="currentEmployee.age">Age</label>
+            <input id="currentEmployee.age" type="text"  ng-model="other.age" value="other.age"/>
+        </div>
+		
+		<div class="formField">
+            <label for="currentEmployee.civilite">Civilite</label>
+            <input id="currentEmployee.civilite" type="text" ng-model="other.civilite"  value="other.civilite" />
+        </div>
+		
+		<div class="formField">
+            <label for="currentEmployee.matrim">Matrim</label>
+            <input id="currentEmployee.matrim" type="text" ng-model="other.matrim"  value="other.matrim"/>
+        </div>
+		
+		<div class="formField">
+            <label for="currentEmployee.email">Email</label>
+            <input id="currentEmployee.email" type="text" ng-model="other.email"  value="other.email" />
+        </div>
+		
+	
+        <hr/>
+
+        <button class="button" ng-click="gotoRetour()">&lt; Retour</button> &nbsp;
+        <button class="button" ng-click="updateEmployee()">Sauver</button>
+
+    </form>
+
+</div>

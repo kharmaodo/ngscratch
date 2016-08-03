@@ -1,0 +1,46 @@
+<div id="todoNew">
+
+    <h2>Nouvel employee</h2>
+
+    <form name="dummy.creationFormulaire">
+
+        <div class="formField">
+            <label for="todo.nom">Nom</label>
+            <input id="todo.nom" type="text" ng-model="todo.nom"/>
+        </div>
+
+        <div class="formField">
+            <label for="todo.prenom">Prenom</label>
+            <input id="todo.prenom" type="text"  ng-model="todo.prenom"/>
+            
+        </div>
+
+		<div class="formField">
+            <label for="todo.age">Age</label>
+            <input id="todo.age" type="text" ng-model="todo.age"/>
+        </div>
+		
+		<div class="formField">
+            <label for="todo.civilite">Civilite</label>
+            <input id="todo.civilite" type="text" ng-model="todo.civilite"/>
+        </div>
+		
+		<div class="formField">
+            <label for="todo.matrim">Matrim</label>
+            <input id="todo.matrim" type="text" ng-model="todo.matrim"/>
+        </div>
+		
+		<div class="formField">
+            <label for="todo.email">Email</label>
+            <input id="todo.email" type="text" ng-model="todo.email"/>
+        </div>
+		
+	
+        <hr/>
+
+        <button class="button" ng-click="gotoRetour()">&lt; Retour</button> &nbsp;
+        <button class="button" ng-click="saveEmployee(todo)">Sauver</button>
+
+    </form>
+
+</div>

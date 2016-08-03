@@ -1,0 +1,42 @@
+  <div id="employeeList" class="generic-container">
+          <div class="panel panel-default">
+           <button ng-click="gotoTodoNewPage()" class="button">Ajouter</button>
+              
+          <div class="panel panel-default">
+                <!-- Default panel contents -->
+              <div class="panel-heading"><span class="lead">Liste des Utilisateurs</span></div>
+              <div class="tablecontainer">
+                  <table class="table table-hover">
+                      <thead>
+                          <th>ObjectId&nbsp;</th>
+        <th>Nom&nbsp;</th>
+        <th>Prenom&nbsp;</th>
+		<th>Age&nbsp;</th>
+        <th>Civilite&nbsp;</th>
+        <th>Situation Matrim&nbsp;</th>
+		<th>Email&nbsp;</th>
+        <th>Action&nbsp;</th>
+                      </thead>
+					 
+                      <tbody>
+                          <tr ng-repeat="u in listEmployees.data">                          
+								<td>{{u.id}}</td>
+								<td>{{u.nom}}</td>
+								<td>{{u.prenom}}</td>
+								<td>{{u.age}}</td>
+								<td>{{u.civilite}}</td>
+								<td>{{u.matrim}}</td>
+								 <td>{{u.email}}</td>
+                <td>
+				
+				<a href="#/employee/{{u.id}}" class="button">Details Employee</a>
+				<a href="#/employee/edit/{{u.id}}" class="button">Editer Employee</a>
+				 <a class="button" ng-click="supprimerEmployee(u.id)" >Supprimer Employee</a>
+				</td>
+				
+				   </tr>
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
