@@ -7,24 +7,24 @@ angular.module('employeeService', ['ngResource']).
     var obj = [];
 	//Fonctionnalité de recuperation de toutes les collections dans MongoDB
     obj.getEmployees = function(){
-        return $http.get(serviceBase + 'employees');
+        return $http.get(serviceBase + 'employee');
     } ;
 		
 	//Recupere un employe par son id
 	obj.getEmployee = function(objectEmployeeId){
-        return $http.get(serviceBase + 'employee?id=' +objectEmployeeId);
+        return $http.get(serviceBase + 'employee/' +objectEmployeeId);
     } ;	
 	
 	//Insertion d'un employee
 	obj.insertEmployee = function(employee){		
-		return $http.post(serviceBase + 'addEmployee', employee).then(function (results){
+		return $http.post(serviceBase + 'employee', employee).then(function (results){
 			 return results;
 			 
 				 });
 	};
 	
 	
-	//Insertion d'un employee
+	//Mis à jour  d'un employee
 	obj.updateEmployee = function(employee){		
 		return $http.put(serviceBase + 'employee', employee).then(function (results){
 			 return results;
@@ -32,7 +32,7 @@ angular.module('employeeService', ['ngResource']).
 	};
 	//http://stackoverflow.com/questions/17379447/angularjs-and-jersey-rest-delete-operation-fails-with-415-status-code
 	obj.supprimerEmployee = function(objectEmployeeId){		
-		return $http.delete(serviceBase +'employee?id=' +objectEmployeeId);
+		return $http.delete(serviceBase +'employee/' +objectEmployeeId);
 	};
     return obj;   
 }]);
